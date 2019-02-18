@@ -1,0 +1,33 @@
+
+
+
+module ssr {
+
+  struct RTMActionSampleGoal {
+    long goal;
+  };
+
+
+  struct RTMActionSampleFeedback {
+    long current;
+  };
+
+
+  struct RTMActionSampleResult {
+    long current;
+  };
+
+  interface RTMActionSample {
+
+    oneway void setGoal(in RTMActionSampleGoal goal);
+
+  };
+
+  interface RTMActionSampleCallback {
+    oneway void setFeedback(in RTMActionSampleFeedback feedback);
+
+    oneway void setResult(in RTMActionSampleResult result);
+  };
+
+};
+
